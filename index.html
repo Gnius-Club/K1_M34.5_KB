@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Misión 34.5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #5DADE2; /* Azul Gnius */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .banner {
+            background-color: #85C1E9; /* Azul más claro */
+            color: #333;
+            padding: 15px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .banner:hover {
+            background-color: #AED6F1;
+        }
+        .banner .title {
+            font-size: 1.3em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 8px;
+            border-top: 1px solid #fff;
+            padding-top: 8px;
+            color: #1A5276; /* Azul oscuro texto */
+        }
+        .content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            background-color: #EAF2F8; /* Azul muy claro fondo */
+            border-radius: 5px;
+        }
+        .dialogue {
+            background-color: #FEF9E7; /* Amarillo pálido para diálogo */
+            border: 1px solid #FAD7A0;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 15px 0;
+            text-align: left; /* Cambiado a izquierda para mejor lectura */
+            font-style: italic;
+            color: #784212; /* Marrón oscuro texto */
+            position: relative; /* Para el bocadillo */
+            border-left: 5px solid #F39C12; /* Naranja */
+        }
+
+        .dropdown {
+            margin-bottom: 25px;
+            text-align: center; /* Centrar dropdown */
+        }
+        .dropdown label {
+            font-weight: bold;
+            color: #1A5276;
+        }
+        .dropdown select {
+            font-size: 1.1em;
+            padding: 8px 12px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: 1px solid #85C1E9;
+        }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px;}
+        td { padding: 12px; border: 1px solid #AED6F1; vertical-align: top; }
+        td strong { color: #1A5276; }
+        .level-title { /* Clase específica para el título del nivel */
+             text-align: center;
+             color: #5DADE2;
+             font-size: 1.4em;
+             margin-bottom: 20px;
+        }
+        /* Clases para ocultar/mostrar contenido por nivel */
+        .k1-content, .k2-content, .k3-content { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Playbook - Misión 34.5: El Tablero con la Casilla Sorpresa</h1>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1 (3 años)</option>
+                <option value="K2">K2 (4 años)</option>
+                <option value="K3">K3 (5 años)</option>
+            </select>
+        </div>
+
+        <h2 id="selected-level" class="level-title">Nivel: K1 (3 años)</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0: Revisión de Materiales -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales</div>
+        <div class="subtitle">Objetivo: Asegurarse de que todos los materiales necesarios para la clase estén disponibles y preparados antes de que lleguen los niños.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Revisa que tengas listos los materiales indicados en la **DIAPOSITIVA 1**: 1 Kinderbot y 10 iBricks por cada pareja. Necesitarás algo para marcar una casilla/iBrick como "sorpresa" (ej. un sticker, un trozo de cinta de color diferente). Kinderbots cargados.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1: Bienvenida e Introducción -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: ¡Un Juego con Reglas Nuevas! ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Objetivo: Introducir la idea de juegos de tablero con reglas especiales y preparar para la lógica condicional simple.</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 2** “Bienvenida”. Saluda recordando juegos de mesa conocidos y pregunta si conocen juegos con casillas especiales.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡Hola, jugadores expertos del CODE SQUAD! ¿Les gustan los juegos de mesa? ¡Como Serpientes y Escaleras o Lotería! Son súper divertidos, ¿verdad? A veces, en esos juegos, hay casillas que te hacen avanzar más rápido, ¡o retroceder! Son casillas... ¡SORPRESA! Pues hoy, ¡vamos a crear nuestro propio juego de tablero para Kinderbot con una de esas casillas sorpresa!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 3** "Gimnasio CODE SQUAD". Explica que necesitan preparar sus cerebros para pensar en reglas de "Si... entonces...".</td>
+                <td>
+                     <div class="dialogue">
+                        "Para jugar con casillas sorpresa, ¡nuestro cerebro tiene que estar listo para las reglas especiales! Reglas como: '**Si** caes aquí, **entonces** haces esto'. ¡Es como pensar en lo que podría pasar! Vamos a nuestro Gimnasio Cerebral para practicar cómo seguir instrucciones ¡que dependen de dónde caigamos! ¡Prepárense para pensar!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2: Baile de Algoritmos -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-algoritmos')">
+        <div class="title">🎶 Actividad 2: Baile de Algoritmos ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Objetivo: Fomentar la atención y la capacidad de seguir una secuencia, preparándose para la programación paso a paso del tablero.</div>
+    </div>
+    <div id="baile-algoritmos" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 4** “Baile de Algoritmos”. Guía el baile, recordando la importancia de seguir cada paso en orden.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡A bailar, CODE SQUAD! En nuestro juego de hoy, ¡cada paso cuenta! Este Baile de Algoritmos nos ayuda a recordar que debemos seguir las instrucciones ¡una después de la otra, en el orden correcto! ¡Adelante, gira, atrás! ¡Sigan la música y no se salten ningún paso! ¡Vamos!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3: Planteamiento del Problema - El Tablero Sorpresa -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">❓ Actividad 3: ¡El Desafío del Tablero Sorpresa! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Presentar la historia del juego, construir el tablero lineal con una casilla marcada como "sorpresa" y definir el reto condicional.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 5**. Narra la historia del juego del Tablero Sorpresa para llegar a la meta.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Atención, jugadores! ¡Kinderbot ha encontrado un mapa antiguo para un juego llamado 'El Tablero Sorpresa'! El mapa muestra un camino de baldosas brillantes (¡nuestros bloques!) que llevan a un ¡cofre lleno de pegatinas holográficas! ¡Guau! Para ganar, Kinderbot tiene que avanzar por las baldosas hasta llegar al cofre."
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 6**. Explica el reto: construir el camino de iBricks, marcar una baldosa como "sorpresa" y explicar la regla condicional ("Si Kinderbot ATERRIZA en la sorpresa después de X pasos, entonces hará algo especial").</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Aquí viene el desafío! Primero, construiremos el camino con nuestros bloques gigantes, ¡poniéndolos en fila! (Demuestra poner 4-8 bloques según nivel). Luego, ¡elegiremos UNA baldosa y la marcaremos como la ¡BALDOSA SORPRESA! (Pone un sticker/marca). Ahora, la regla secreta del juego: Programaremos a Kinderbot para avanzar un número de pasos. **Si** justo después de dar esos pasos, Kinderbot queda PARADO sobre la Baldosa Sorpresa, **entonces** ¡tendrá que hacer algo especial! (Como girar, retroceder, etc.). ¡Pero si no cae en la sorpresa, sigue normal! ¿Listos para construir el tablero y descubrir la regla sorpresa?"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4: Formación de Parejas -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: ¡Equipos del Tablero Mágico! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Formar parejas para construir el tablero, marcar la casilla sorpresa y prepararse para programar según la regla condicional.</div>
+    </div>
+    <div id="formacion-parejas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 7** “Formación de Equipos”. Explica que jugar y seguir reglas especiales es más fácil en equipo. Forma las parejas.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Pequeños estrategas! ¡Crear un juego con reglas sorpresa necesita de mentes brillantes trabajando juntas! ¡En equipo pueden construir el tablero, decidir dónde poner la sorpresa y planear los pasos de Kinderbot! ¡Formen sus Equipos del Tablero Mágico! ¡Busquen a su compañero de juego!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Verifica que todos tengan pareja. Anímales a construir el camino y elegir dónde poner la marca de "sorpresa".</td>
+                <td>
+                     <div class="dialogue">
+                        "¿Equipos listos? ¡Perfecto! Ahora, ¡construyan su camino de baldosas (bloques) en fila! Decidan juntos cuántas baldosas poner (según su nivel). Y lo más importante: ¡elijan UNA baldosa y márquenla como la SORPRESA! Pónganle un sticker o una cinta. ¡Que sea un secreto dónde está! ¡Preparen su tablero!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5: Reto de Codificación - ¡Programando con la Regla Sorpresa! -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('reto-codificacion')">
+        <div class="title">⌨️ Actividad 5: ¡Código Sorpresa Activado! ⏰ Tiempo: 6 minutos</div>
+        <div class="subtitle">Objetivo: Construir el tablero, programar la secuencia de avance y (mentalmente o con ayuda) aplicar la regla condicional si aplica.</div>
+    </div>
+    <div id="reto-codificacion" class="content">
+        <table>
+            <!-- Paso Común: Construir Tablero y Anunciar Regla -->
+             <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 8** "¡Tablero Listo y Regla Secreta!". Supervisa la construcción del tablero con la casilla sorpresa marcada. Anuncia la regla específica para el nivel. Repasa botones.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Qué bien se ven esos tableros con su casilla sorpresa! Ahora, ¡escuchen la regla secreta de hoy! (Anuncia la regla según el nivel abajo). Recuerden los botones: Adelante para avanzar, Girar si la regla lo pide, Atrás si la regla lo pide. ¡Vamos a programar pensando en la sorpresa!"
+                    </div>
+                </td>
+            </tr>
+            <!-- Contenido Específico por Nivel -->
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 2 - K1 (4 minutos):</strong> Reproduce la **DIAPOSITIVA 9** "Misión K1: Sorpresa y Giro". Tablero de 4 casillas. Regla: "Avanza 3 pasos. Si el tercero es sorpresa, ¡gira!". Guía para programar 3 pasos (A, A, A) y *si aplica la regla*, añadir 1 Giro (G).</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! ¡Construyan su tablero con 4 baldosas y marquen una como sorpresa! La regla es: ¡Avanza 3 pasos! Cuenten... uno, dos, tres. ¿El tercer paso cae en la sorpresa? **Si** cae en la sorpresa, **entonces** después de los 3 pasos, ¡añaden UN 'Girar'! Si NO cae en la sorpresa, ¡no hacen nada más! Programen 'Adelante, Adelante, Adelante'. Miren dónde cae. ¿Cayó en la sorpresa? (Ayuda a verificar). Si sí, añadan 'Girar'. ¡Preparen su código final! ¡Sin 'Go'!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                <td><strong>PASO 2 - K2 (4 minutos):</strong> Reproduce la **DIAPOSITIVA 10** "Misión K2: Sorpresa y Retroceso". Tablero de 6 casillas. Regla: "Avanza 4 pasos. Si el cuarto es sorpresa, ¡da un paso Atrás!". Guía para programar 4 pasos (A,A,A,A) y *si aplica*, añadir 1 Atrás.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Jugadores K2! ¡Tablero de 6 baldosas con una sorpresa! La regla: ¡Avanza 4 pasos! Cuenten bien... uno, dos, tres, cuatro. ¿El cuarto paso los deja en la sorpresa? **Si** sí, **entonces** después de los 4 pasos, ¡añaden UN 'Atrás'! Si NO, ¡se quedan ahí! Programen 'Adelante, Adelante, Adelante, Adelante'. ¿Dónde cayó? (Verifica con ellos). Si es sorpresa, añadan 'Atrás'. ¡Preparen el código! ¡Sin 'Go'!"
+                    </div>
+                </td>
+            </tr>
+            <!-- K3 -->
+             <tr class="k3-content">
+                <td><strong>PASO 2 - K3 (4 minutos):</strong> Reproduce la **DIAPOSITIVA 11** "Misión K3: ¡Sorpresa Doble Acción!". Tablero de 6-8 casillas. Regla: "Avanza 5 pasos. Si el quinto es sorpresa, ¡Gira y Avanza 1 más!". Guía para programar 5 pasos (A,A,A,A,A) y *si aplica*, añadir Giro y Adelante.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Estrategas K3! ¡Tablero de 6 a 8 baldosas, marquen la sorpresa! Regla compleja: ¡Avanza 5 pasos! Cuenten... 1, 2, 3, 4, 5. ¿Aterrizaron en la sorpresa? **Si** es así, **entonces** después de los 5 pasos, ¡añaden UN 'Girar' Y UN 'Adelante' más! ¡Doble acción! Si no cayeron en la sorpresa, ¡termina ahí! Programen 'Adelante' 5 veces. Verifiquen dónde cae. Si es sorpresa, añadan 'Girar', 'Adelante'. ¡Preparen su código! ¡Aún no presionen 'Go'!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6: ¡Jugando con la Sorpresa! -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('probando-sorpresa')">
+        <div class="title">🚀 Actividad 6: ¡Activando la Casilla Sorpresa! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Ejecutar el código, observar si Kinderbot realiza la acción especial al caer en la casilla sorpresa, reforzando la lógica condicional.</div>
+    </div>
+    <div id="probando-sorpresa" class="content">
+        <table>
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 1 - K1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 12** "¡Éxito K1!". Anima a poner a Kinderbot al inicio y presionar 'Go'. Observar si avanza 3 y, si cayó en sorpresa, si gira. Celebrar el resultado.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! ¡Kinderbot listo en la primera baldosa! ¿Preparados con su código? ¡Presionen 'Go'! Contemos: Uno, dos, tres... ¿Cayó en la sorpresa? Si sí, ¿giró? ¡Genial! ¡Siguieron la regla secreta! Si no cayó, ¡también está bien, llegó a la tercera casilla! ¡Buen juego!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                 <td><strong>PASO 1 - K2 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 13** "¡Éxito K2!". Anima a poner a Kinderbot al inicio y presionar 'Go'. Observar si avanza 4 y, si cayó en sorpresa, si retrocede. Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Jugadores K2! ¡Kinderbot al inicio! ¿Listos con el código? ¡Presionen 'Go'! Contemos: Uno, dos, tres, cuatro... ¿Paró en la sorpresa? Si sí, ¿dio un pasito atrás? ¡Increíble! ¡La regla sorpresa funcionó! Si no, ¡llegó a la cuarta casilla! ¡Excelente!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K3 -->
+             <tr class="k3-content">
+                 <td><strong>PASO 1 - K3 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 14** "¡Éxito K3!". Anima a poner a Kinderbot al inicio y presionar 'Go'. Observar si avanza 5 y, si cayó en sorpresa, si gira y avanza 1 más. Celebrar la doble acción.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Estrategas K3! ¡Kinderbot en la salida! ¿Listos con el código complejo? ¡Presionen 'Go'! Contemos: 1, 2, 3, 4, 5... ¿Cayó en la sorpresa? Si sí, ¿giró Y avanzó uno más? ¡DOBLE SORPRESA! ¡Qué bien aplicaron la regla! Si no cayó, ¡llegó al quinto paso perfecto! ¡Son maestros del tablero!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7: Mensaje del Cuartel (Omitida para Misión 34.5) -->
+
+<!-- Actividad 8: Conclusión y Reflexión -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion-reflexion')">
+        <div class="title">🏁 Actividad 8: ¡Juego Ganado y Reflexión! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Celebrar el éxito del juego, reforzar la lógica "Si... entonces..." y reflexionar sobre cómo las reglas afectan el resultado.</div>
+    </div>
+    <div id="conclusion-reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 15** "¡Misión Cumplida!". Cierra la historia (Kinderbot ganó las pegatinas). Realiza preguntas de reflexión enfocadas en la regla condicional.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡Felicidades, súper jugadores del CODE SQUAD! ¡Gracias a su inteligencia para seguir las reglas, Kinderbot completó el Tablero Sorpresa y ganó el cofre de pegatinas holográficas! ¡Misión súper divertida y cumplida! Pensemos en este juego tan especial:
+1. ¿Qué hacía diferente a la 'Baldosa Sorpresa'? (¡Tenía una regla especial!)
+2. ¿Qué pasaba **si** Kinderbot caía en la sorpresa? (¡Hacía algo extra: girar, retroceder...!) ¿Y **si** NO caía en la sorpresa? (¡No hacía nada extra!)
+3. ¿Les gustó jugar con una regla de 'Si... entonces...'? ¿Hizo el juego más emocionante?
+¡Han aprendido a programar pensando en condiciones! ¡Eso es de programadores muy avanzados! ¡Estoy súper orgulloso! ¡Hasta la próxima partida!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+        <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        var parentActivity = content.closest('.activity');
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            parentActivity.classList.remove('active');
+        } else {
+            content.style.display = "block";
+            parentActivity.classList.add('active');
+        }
+    }
+
+    function updateContent() {
+        var level = document.getElementById("class-level").value;
+        var levelText = document.getElementById("class-level").options[document.getElementById("class-level").selectedIndex].text;
+        document.getElementById("selected-level").innerText = "Nivel: " + levelText;
+
+        var k1Contents = document.querySelectorAll('.k1-content');
+        var k2Contents = document.querySelectorAll('.k2-content');
+        var k3Contents = document.querySelectorAll('.k3-content');
+
+        k1Contents.forEach(function(el) { el.style.display = 'none'; });
+        k2Contents.forEach(function(el) { el.style.display = 'none'; });
+        k3Contents.forEach(function(el) { el.style.display = 'none'; });
+
+        var selectedContents = document.querySelectorAll('.' + level.toLowerCase() + '-content');
+        selectedContents.forEach(function(el) {
+             el.style.display = 'table-row';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        updateContent();
+    });
+</script>
+
+</body>
+</html>
